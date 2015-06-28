@@ -99,6 +99,11 @@ namespace FluentHtmlBuilder
             return tagbuilder;
         }
 
+        public static MvcHtmlString ToMvcHtmlString(this TagBuilder tagbuilder)
+        {
+            return new MvcHtmlString(tagbuilder.ToString());
+        }
+
         private static string GetContent(object[] innerHtml)
         {
             var content = string.Join(Environment.NewLine, from html in innerHtml
