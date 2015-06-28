@@ -10,6 +10,6 @@ Example:
     var items = new [] { "one", "two", "three" };
     var list = Tag.Element("ul").WithInnerHtml(
                   Tag.Element("li", "First Thing in list"), 
-                  items.Select(i => Tag.Element("li", i))):
+                  items.Select(i => Tag.Element("li", i)));
                   
     var html = list.ToString();
